@@ -42,9 +42,7 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    protected void checkUrl(String url) {
-        Assert.assertEquals(driver.getCurrentUrl(), url);
-    }
+
 
     protected List<WebElement> findElements(By locator) {
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));

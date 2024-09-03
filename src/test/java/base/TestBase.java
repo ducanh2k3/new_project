@@ -2,6 +2,7 @@ package base;
 
 import driver.DriverFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -20,5 +21,8 @@ public class TestBase {
     public void tearDown() {
         driver.quit();
 
+    }
+    protected void checkUrl(String url) {
+        Assert.assertEquals(driver.getCurrentUrl(), url);
     }
 }

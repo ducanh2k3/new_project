@@ -12,7 +12,6 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    //    (//div[@class='inventory_item'])[1]//div[2]//a
     By itemsLocator = By.xpath("(//div[@class='inventory_item'])");
 
     List<WebElement> items = findElements(itemsLocator);
@@ -28,7 +27,7 @@ public class HomePage extends BasePage {
 
             // Perform the click action
             click(itemLink);
-//            checkUrl("https://www.saucedemo.com/v1/inventory-item.html?id=4");
+
         } else {
             System.out.println("Index out of bounds: " + index);
         }

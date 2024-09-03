@@ -6,8 +6,9 @@ import pages.HomePage;
 
 public class HomeTest extends TestBase {
     private HomePage homePage;
+
     @Test
-    public void TestClickItem(){
-        homePage.clickItemByIndex(1);
+    public void TestClickItem(int index) {
+        homePage.clickItemByIndex(index);
     }
 }
