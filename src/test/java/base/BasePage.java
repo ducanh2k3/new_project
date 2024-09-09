@@ -13,6 +13,8 @@ import java.util.List;
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
+    public By myCartLocator = By.xpath("//a[@class='shopping_cart_link fa-layers fa-fw']//*[name()='svg']");
+
 
     public BasePage(WebDriver driver) {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -41,7 +43,6 @@ public class BasePage {
     protected WebElement findElement(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
 
 
     protected List<WebElement> findElements(By locator) {

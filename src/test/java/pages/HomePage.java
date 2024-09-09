@@ -15,6 +15,7 @@ public class HomePage extends BasePage {
     By itemsLocator = By.xpath("(//div[@class='inventory_item'])");
 
     List<WebElement> items = findElements(itemsLocator);
+    WebElement myCart= findElement(myCartLocator);
 
     public void clickItemByIndex(int index) {
         if (index >= 0 && index < items.size()) {
@@ -31,5 +32,8 @@ public class HomePage extends BasePage {
         } else {
             System.out.println("Index out of bounds: " + index);
         }
+    }
+    public void navigateToMyCart(){
+        click(myCart);
     }
 }
