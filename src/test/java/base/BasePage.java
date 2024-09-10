@@ -49,4 +49,8 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 
+    protected void checkAddToCart(WebElement Btn, String text) {
+        Assert.assertEquals(Btn.getText(), text);
+    }
+
 }

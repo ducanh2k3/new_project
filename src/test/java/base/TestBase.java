@@ -26,4 +26,5 @@ public class TestBase {
     protected void checkUrl(String url) {
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
+
 }

@@ -11,4 +11,5 @@ public class HomeTest extends TestBase {
     public void TestClickItem(int index) {
         homePage.clickItemByIndex(index);
     }
+
 }

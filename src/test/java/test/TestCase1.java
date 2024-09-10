@@ -18,11 +18,13 @@ public void TC1(){
         loginPage= new LoginPage(driver);
         loginPage.Login("standard_user", "secret_sauce");
         homePage =new HomePage(driver);
+        homePage.addItemToCartByIndex(2);
         homePage.clickItemByIndex(0);
         itemPage = new ItemPage(driver);
         itemPage.addToCart();
         itemPage.backToHome();
         homePage.navigateToMyCart();
+
 
     }
     @Test

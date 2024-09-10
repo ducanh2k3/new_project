@@ -22,7 +22,7 @@ WebElement myCart = findElement(myCartLocator);
 
     public void addToCart() {
         click(addToCartButton);
-        Assert.assertEquals(addToCartButton.getText(), "REMOVE");
+     checkAddToCart(addToCartButton,"REMOVE");
     }
 
     public void backToHome() {
