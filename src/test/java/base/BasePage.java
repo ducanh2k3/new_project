@@ -14,7 +14,7 @@ public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
     public By myCartLocator = By.xpath("//a[@class='shopping_cart_link fa-layers fa-fw']//*[name()='svg']");
-
+    public  By logOutBtnLocator = By.xpath("//a[@id='logout_sidebar_link']");
 
     public BasePage(WebDriver driver) {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(2));
@@ -51,6 +51,16 @@ public class BasePage {
 
     protected void checkAddToCart(WebElement Btn, String text) {
         Assert.assertEquals(Btn.getText(), text);
+    }
+
+    protected void logOut(){
+        By menuLocator = By.xpath("//div[@class='bm-burger-button']");
+        WebElement menuBtn = findElement(menuLocator);
+        click(menuBtn);
+        WebElement logOutBtn = findElement(logOutBtnLocator);
+        click(logOutBtn);
+
+
     }
 
 }

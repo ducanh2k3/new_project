@@ -14,9 +14,9 @@ public class HomePage extends BasePage {
 
     By itemsLocator = By.xpath("(//div[@class='inventory_item'])");
 
-
     List<WebElement> items = findElements(itemsLocator);
     WebElement myCart = findElement(myCartLocator);
+
 
     public void clickItemByIndex(int index) {
         if (index >= 0 && index < items.size()) {
@@ -40,10 +40,14 @@ public class HomePage extends BasePage {
         System.out.println(addToCartButton.getText());
         click(addToCartButton);
         System.out.println(addToCartButton.getText());
-        checkAddToCart(addToCartButton,"REMOVE");
+        checkAddToCart(addToCartButton, "REMOVE");
     }
 
     public void navigateToMyCart() {
         click(myCart);
+    }
+
+    public void LogOut() {
+        logOut();
     }
 }

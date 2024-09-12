@@ -17,13 +17,18 @@ public class TestCase1 extends TestBase {
 public void TC1(){
         loginPage= new LoginPage(driver);
         loginPage.Login("standard_user", "secret_sauce");
+        checkUrl("https://www.saucedemo.com/v1/inventory.html");
         homePage =new HomePage(driver);
         homePage.addItemToCartByIndex(2);
         homePage.clickItemByIndex(0);
         itemPage = new ItemPage(driver);
         itemPage.addToCart();
         itemPage.backToHome();
+        checkUrl("https://www.saucedemo.com/v1/inventory.html");
         homePage.navigateToMyCart();
+        checkUrl("https://www.saucedemo.com/v1/cart.html");
+        homePage.LogOut();
+        checkUrl("https://www.saucedemo.com/v1/index.html");
 
 
     }

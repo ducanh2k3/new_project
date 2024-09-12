@@ -40,4 +40,8 @@ public class ItemPageTest extends TestBase {
         itemPage.navigateToCart();
         checkUrl("https://www.saucedemo.com/v1/cart.html");
     }
+    @Test
+    public void clickMenu(){
+        homePage.LogOut();
+    }
 }
