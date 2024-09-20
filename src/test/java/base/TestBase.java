@@ -26,5 +26,8 @@ public class TestBase {
     protected void checkUrl(String url) {
         Assert.assertEquals(driver.getCurrentUrl(), url);
     }
+    protected void wait5s() throws InterruptedException {
+        Thread.sleep(5000);
+    }
 
 }
